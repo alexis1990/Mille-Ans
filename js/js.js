@@ -24,8 +24,6 @@ $(document).ready(function() {
 
     //VIDEO
 
-    // var player = {};
-
     function generatePlayer(video, button, progressBar) {
 
         var player = {
