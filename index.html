@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Transhumanisme</title>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section">
+<!-- 			<div class="share"></div> -->
+			<div id="button">
+			</div>
+
+			<video id="video">
+			    <source src="videos/v06-07_ld.mp4" type='video/mp4'>
+			    <p>Your user agent does not support the HTML5 Video element.</p>
+			</video>
+
+			<div class="hide element1"></div>
+			<div class="hide element2"></div>
+
+			<div id="progressBar">
+			    <span class="progress"></span>
+			    <span class="buffer"></span>
+			</div>
+			
+			<button class="fullscreen">fullscreen</button>
+
+		</div>
+
+		<div class="section">
+
+			<div id="poll">
+				<h3>Pensez vous pouvoir vivre ?</h3>
+				<form>
+				Yes:
+				<input type="radio" name="vote" value="1" onClick="Vote(this.value)">
+				<br>No:
+				<input type="radio" name="vote" value="0" onClick="Vote(this.value)">
+				</form>
+			</div>
+
+		</div>
+
+
+		<div class="section"></div>
+
+		<div class="section">
+			<div id="secondbutton"></div>
+
+			<video id="secondVideo">
+			    <source src="videos/rush.mp4" type='video/mp4'>
+			    <p>Your user agent does not support the HTML5 Video element.</p>
+			</video>
+
+			<div id="secondprogressBar">
+			    <span class="secondprogress"></span>
+			    <span class="secondbuffer"></span>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/fullscreen.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript">
+	    
+	    //VOTE
+	    function Vote(int) {
+	        if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+	            xmlhttp = new XMLHttpRequest();
+	        } else { // code for IE6, IE5
+	            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	        xmlhttp.onreadystatechange = function() {
+	            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	                document.getElementById("poll").innerHTML = xmlhttp.responseText;
+	            }
+	        }
+	        xmlhttp.open("GET", "php/vote.php?vote=" + int, true);
+	        xmlhttp.send();
+	    }
+    </script>
+</body>
+</html>
