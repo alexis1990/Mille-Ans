@@ -71,6 +71,12 @@ $(document).ready(function() {
                     player.video.pause();
                     player.button.classList.remove('play');
                 }
+            },
+            listenToEvent: function() {
+                this.pB.addEventListener('click', this.setVideoTime, false);
+                this.video.addEventListener('canplaythrough', this.playPause, false);
+                this.video.addEventListener('click', this.playPause, false);
+                this.video.addEventListener('timeupdate', this.playProgress, false);
             }
         };
 
@@ -84,15 +90,8 @@ $(document).ready(function() {
     var video1 = generatePlayer(document.getElementById('video'), document.getElementById('button'), document.getElementById('progressBar'), 'video1');
     var video2 = generatePlayer(document.getElementById('secondVideo'), document.getElementById('secondbutton'), document.getElementById('secondprogressBar'), 'video2');
 
-    video1.pB.addEventListener('click', video1.setVideoTime, false);
-    video1.video.addEventListener('canplaythrough', video1.playPause, false);
-    video1.video.addEventListener('click', video1.playPause, false);
-    video1.video.addEventListener('timeupdate', video1.playProgress, false);
-
-    video2.video.addEventListener('canplaythrough', video2.playPause, false);
-    video2.video.addEventListener('click', video2.playPause, false);
-    video2.video.addEventListener('timeupdate', video2.playProgress, false);
-    video2.pB.addEventListener('click', video2.setVideoTime, false);
+    video1.listenToEvent();
+    video2.listenToEvent();
 
     //FULLSCREEN VIDEO
     jQuery(function($) {
@@ -196,7 +195,7 @@ $(document).ready(function() {
 
         // })
 
-        $(".closebox").click(function() {
+        $(".lightbox").click(function() {
             $(".lightbox").fadeOut(400);
             $('.texte1').addClass('hide');
             $('.texte2').addClass('hide');
