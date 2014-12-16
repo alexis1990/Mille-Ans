@@ -133,7 +133,7 @@ $(document).ready(function() {
         video2.video.load();
         video2.video.play();
         video2.video.onended = function() {
-            $.fn.fullpage.moveTo(2);
+            $.fn.fullpage.moveTo(6);
         };
 
     })
@@ -146,7 +146,7 @@ $(document).ready(function() {
         video2.video.load();
         video2.video.play();
         video2.video.onended = function() {
-            $.fn.fullpage.moveTo(2);
+            $.fn.fullpage.moveTo(6);
         };
 
     })

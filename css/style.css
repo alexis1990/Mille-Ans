@@ -272,7 +272,7 @@ img{
 }
 
 .fondinteractif{
-	background: url(../maquette/src/interactif.jpg) no-repeat center center;
+	background: url(../css/image/interactif.jpg) no-repeat center center;
 	background-size:100% auto;
 }
 
