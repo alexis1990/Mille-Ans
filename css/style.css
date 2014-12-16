@@ -76,24 +76,21 @@ video{
 
 #progressBar{
 	width:80%;
-	height:8px;
-	border-radius:4px;
+	height:4px;
 	border:1px solid #fff;
 	position:absolute;
-	bottom:20px;
+	bottom:30px;
 	left:10%;
 	opacity:.6;
 	z-index:6;
 }
 
 #progressBar span{
-	border-top-left-radius:2px;
-	border-bottom-left-radius:2px;
-	height:6px;
+	height:4px;
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
-	top:1px;
+	top:-1px;
 }
 
 #progressBar .progress{
@@ -106,20 +103,20 @@ video{
 
 #button{
 	position:absolute;
-	bottom:2%;
-	left:5%;
+	bottom:4%;
+	left:7%;
 	z-index:2;
-	height:25px;
-	width:25px;
+	height:15px;
+	width:15px;
 	border:2px solid #fff;
-	border-radius:200px;
-	opacity:.5;
+	border-radius:100px;
+	opacity:.6;
 	text-align:center;
 	background:transparent;transition:opacity .2s ease, -webkit-transform .2s ease;
 }
 
 #button.play{
-	-webkit-transform:scale(4);
+	-webkit-transform:scale(2);
 	opacity:0;
 }
 
@@ -144,24 +141,21 @@ video{
 
 #secondprogressBar{
 	width:80%;
-	height:8px;
-	border-radius:4px;
+	height:4px;
 	border:1px solid #fff;
 	position:absolute;
-	bottom:20px;
+	bottom:30px;
 	left:10%;
 	opacity:.6;
 	z-index:6;
 }
 
 #secondprogressBar span{
-	border-top-left-radius:2px;
-	border-bottom-left-radius:2px;
-	height:6px;
+	height:4px;
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
-	top:1px;
+	top:-1px;
 }
 
 #secondprogressBar .progress{
@@ -174,20 +168,20 @@ video{
 
 #secondbutton{
 	position:absolute;
-	bottom:2%;
-	left:5%;
+	bottom:4%;
+	left:7%;
 	z-index:2;
-	height:25px;
-	width:25px;
+	height:15px;
+	width:15px;
 	border:2px solid #fff;
-	border-radius:200px;
-	opacity:.5;
+	border-radius:100px;
+	opacity:.6;
 	text-align:center;
 	background:transparent;transition:opacity .2s ease, -webkit-transform .2s ease;
 }
 
 #secondbutton.play{
-	-webkit-transform:scale(4);
+	-webkit-transform:scale(2);
 	opacity:0;
 }
 
