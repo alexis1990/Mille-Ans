@@ -7,11 +7,11 @@ $(document).ready(function() {
         'verticalCentered': false,
         'css3': true,
         'resize': false,
-        'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide'],
-        'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#fff', '#aaa', '#fff', '#aaa'],
+        'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide'],
+        'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#aaa', '#aaa', '#111', '#aaa', '#111', '#aaa', '#111', '#111'],
         'navigation': true,
         'navigationPosition': 'left',
-        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide'],
+        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide'],
 
         onLeave: function(index, nextIndex, direction) {
             if (index == 3 && direction == 'down') {
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
     $('.element1').click(function(e) {
         e.stopPropagation();
-        $.fn.fullpage.moveTo(4);
+        $.fn.fullpage.moveTo(7);
         video2.video.src = "videos/v06-07_ld.mp4";
         video2.video.load();
         video2.video.play();
@@ -141,7 +141,7 @@ $(document).ready(function() {
 
     $('.element2').click(function(e) {
         e.stopPropagation();
-        $.fn.fullpage.moveTo(4);
+        $.fn.fullpage.moveTo(7);
         video2.video.src = "videos/v06-07_ld.mp4";
         video2.video.load();
         video2.video.play();
