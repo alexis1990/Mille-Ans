@@ -13,30 +13,47 @@ input {
 	display: none;
 }
 
+[id*=bar-] {
+	background: #000;
+	display: block;
+	position: absolute;
+	z-index: 9999;
+}
+
+#bar-top {width: 100%; height: 15px; top: 0;}
+#bar-right {width: 15px; height: 100%; right: 0;}
+#bar-bottom {width: 100%; height: 15px; bottom: 0;}
+#bar-left {width: 15px; height: 100%; left: 0;}
+
+.masque {
+	width: 100%; height: 100%;
+	background: rgba(0,0,0,0.8);
+}
+
 /*SONDAGE*/
 #slide-sondage {
-	background: url('../img/default.jpg') no-repeat center center;
+	background: url(../css/image/interactif.jpg) no-repeat center center;
 	background-size: cover;
 	position: relative;
 }
 
 #poll {
 	position: absolute;
-	bottom: 150px;
+	bottom: 10%;
 	left: 75px;
 	color: #fff;
 }
 
 #poll h3 {
-	font-size: 48px;
+	font-size: 36px;
 }
 
 label {
 	cursor: pointer;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 30px;
-	margin: 25px 50px 0 25px;
+	font-size: 24px;
+	margin: 15px 50px 0 25px;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
 	-ms-transition: 0.2s all;
@@ -59,24 +76,21 @@ video{
 
 #progressBar{
 	width:80%;
-	height:8px;
-	border-radius:4px;
+	height:4px;
 	border:1px solid #fff;
 	position:absolute;
-	bottom:20px;
+	bottom:30px;
 	left:10%;
 	opacity:.6;
 	z-index:6;
 }
 
 #progressBar span{
-	border-top-left-radius:2px;
-	border-bottom-left-radius:2px;
-	height:6px;
+	height:4px;
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
-	top:1px;
+	top:-1px;
 }
 
 #progressBar .progress{
@@ -89,20 +103,20 @@ video{
 
 #button{
 	position:absolute;
-	bottom:2%;
-	left:5%;
+	bottom:4%;
+	left:7%;
 	z-index:2;
-	height:25px;
-	width:25px;
+	height:15px;
+	width:15px;
 	border:2px solid #fff;
-	border-radius:200px;
-	opacity:.5;
+	border-radius:100px;
+	opacity:.6;
 	text-align:center;
 	background:transparent;transition:opacity .2s ease, -webkit-transform .2s ease;
 }
 
 #button.play{
-	-webkit-transform:scale(4);
+	-webkit-transform:scale(2);
 	opacity:0;
 }
 
@@ -123,28 +137,31 @@ video{
     100% {-webkit-transform: rotate(360deg);}
 }
 
+/* AUTRE VIDEO */
+.video1{
+	background: url(../css/image/interactif.jpg) no-repeat center center;
+	background-size: cover;
+}
+
 /*SECONDVIDEO*/
 
 #secondprogressBar{
 	width:80%;
-	height:8px;
-	border-radius:4px;
+	height:4px;
 	border:1px solid #fff;
 	position:absolute;
-	bottom:20px;
+	bottom:30px;
 	left:10%;
 	opacity:.6;
 	z-index:6;
 }
 
 #secondprogressBar span{
-	border-top-left-radius:2px;
-	border-bottom-left-radius:2px;
-	height:6px;
+	height:4px;
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
-	top:1px;
+	top:-1px;
 }
 
 #secondprogressBar .progress{
@@ -157,20 +174,20 @@ video{
 
 #secondbutton{
 	position:absolute;
-	bottom:2%;
-	left:5%;
+	bottom:4%;
+	left:7%;
 	z-index:2;
-	height:25px;
-	width:25px;
+	height:15px;
+	width:15px;
 	border:2px solid #fff;
-	border-radius:200px;
-	opacity:.5;
+	border-radius:100px;
+	opacity:.6;
 	text-align:center;
 	background:transparent;transition:opacity .2s ease, -webkit-transform .2s ease;
 }
 
 #secondbutton.play{
-	-webkit-transform:scale(4);
+	-webkit-transform:scale(2);
 	opacity:0;
 }
 
@@ -196,6 +213,12 @@ img{
     vertical-align: middle;
     max-height:50px;
     max-width: 50px;
+}
+
+/*IMAGE INTERACTIF*/
+.imgInteractive{
+	background: url(../css/image/bed.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 /*ELEMENTS*/
@@ -230,7 +253,13 @@ img{
 /*FULLSCREEN*/
 
 .fullscreen{
+	background: url(../css/image/fullscreen.svg) no-repeat;
+	width: 50px;
+	height: 50px;
+	opacity:.6;
 	position: absolute;
+	top:93%;
+	left:90%;
 	z-index: 20;
 	cursor: pointer;
 	background-color: transparent;
