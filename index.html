@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" type="text/css" href="font/Avenir/fonts.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css.map">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
@@ -10,6 +11,21 @@
 </head>
 <body>
 	<div id="fullpage">
+
+		<div class="section" id="slide-sondage">
+
+			<div id="poll">
+				<h3>Pensez vous pouvoir vivre plus de 1000 ans?</h3>
+				<form>
+				Yes:
+				<input type="radio" name="vote" value="1" onClick="Vote(this.value)">
+				<br>No:
+				<input type="radio" name="vote" value="0" onClick="Vote(this.value)">
+				</form>
+			</div>
+
+		</div>
+
 		<div class="section">
 <!-- 			<div class="share"></div> -->
 			<div id="button">
@@ -29,20 +45,6 @@
 			</div>
 			
 			<button class="fullscreen glyphicon glyphicon-fullscreen"></button>
-
-		</div>
-
-		<div class="section">
-
-			<div id="poll">
-				<h3>Pensez vous pouvoir vivre ?</h3>
-				<form>
-				Yes:
-				<input type="radio" name="vote" value="1" onClick="Vote(this.value)">
-				<br>No:
-				<input type="radio" name="vote" value="0" onClick="Vote(this.value)">
-				</form>
-			</div>
 
 		</div>
 

@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Conv_Avenir-Book';
+	src: url('fonts/Avenir-Book.eot');
+	src: local('☺'), url('fonts/Avenir-Book.woff') format('woff'), url('fonts/Avenir-Book.ttf') format('truetype'), url('fonts/Avenir-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Avenir-Light';
+	src: url('fonts/Avenir-Light.eot');
+	src: local('☺'), url('fonts/Avenir-Light.woff') format('woff'), url('fonts/Avenir-Light.ttf') format('truetype'), url('fonts/Avenir-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Avenir-Medium';
+	src: url('fonts/Avenir-Medium.eot');
+	src: local('☺'), url('fonts/Avenir-Medium.woff') format('woff'), url('fonts/Avenir-Medium.ttf') format('truetype'), url('fonts/Avenir-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Avenir-Roman';
+	src: url('fonts/Avenir-Roman.eot');
+	src: local('☺'), url('fonts/Avenir-Roman.woff') format('woff'), url('fonts/Avenir-Roman.ttf') format('truetype'), url('fonts/Avenir-Roman.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
