@@ -7,11 +7,11 @@ $(document).ready(function() {
         'verticalCentered': false,
         'css3': true,
         'resize': false,
-        'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
-        'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000'],
+        'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide'],
+        'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#fff', '#aaa', '#fff', '#aaa'],
         'navigation': true,
         'navigationPosition': 'left',
-        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
+        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide'],
 
         onLeave: function(index, nextIndex, direction) {
             if (index == 3 && direction == 'down') {
