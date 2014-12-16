@@ -141,6 +141,7 @@ html, body {
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
     background: #fff;
+    opacity:.8;
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -149,6 +150,7 @@ html, body {
     width: 8px;
     height: 8px;
     border: 1px solid #fff;
+    opacity:.8;
     background: rgba(0, 0, 0, 0);
     border-radius: 50%;
     position: absolute;
