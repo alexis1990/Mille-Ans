@@ -17,10 +17,10 @@
 			<div id="poll">
 				<h3>Pensez vous pouvoir vivre plus de 1000 ans?</h3>
 				<form>
-				Yes:
-				<input type="radio" name="vote" value="1" onClick="Vote(this.value)">
-				<br>No:
-				<input type="radio" name="vote" value="0" onClick="Vote(this.value)">
+				<label for="poll-oui">— Oui</label>
+				<input type="radio" name="vote" id="poll-oui" value="1" onClick="Vote(this.value)">
+				<label for="poll-non">— Non</label>
+				<input type="radio" name="vote" id="poll-non" value="0" onClick="Vote(this.value)">
 				</form>
 			</div>
 

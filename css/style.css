@@ -6,11 +6,46 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	font-weight: normal;
+}
+
+input {
+	display: none;
 }
 
 /*SONDAGE*/
 #slide-sondage {
-	
+	background: url('../img/default.jpg') no-repeat center center;
+	background-size: cover;
+	position: relative;
+}
+
+#poll {
+	position: absolute;
+	bottom: 150px;
+	left: 75px;
+	color: #fff;
+}
+
+#poll h3 {
+	font-size: 48px;
+}
+
+label {
+	cursor: pointer;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin: 25px 50px 0 25px;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-ms-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+label:hover {
+	transform: translateX(10px);
 }
 
 /*VIDEO*/
