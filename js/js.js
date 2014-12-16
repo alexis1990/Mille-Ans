@@ -45,14 +45,16 @@ $(document).ready(function() {
                     document.querySelector('.secondprogress').style.width = progress + '%';
                 }
                 var time = self.currentTime;
-                if (time > 2.00 && time < 2.30) {
-                    video.pause();
-                    button.classList.remove('pause');
-                    $('.element1').removeClass('hide');
-                    $('.element2').removeClass('hide');
-                } else {
-                    $('.element1').addClass('hide');
-                    $('.element2').addClass('hide');
+                if (video.id == 'video') {
+                    if (time > 2.00 && time < 2.30) {
+                        video.pause();
+                        button.classList.remove('pause');
+                        $('.element1').removeClass('hide');
+                        $('.element2').removeClass('hide');
+                    } else {
+                        $('.element1').addClass('hide');
+                        $('.element2').addClass('hide');
+                    }
                 }
             },
             playPause: function(e) {
@@ -138,13 +140,12 @@ $(document).ready(function() {
         console.log('ok');
     })
 
-    $('.element1').click(function(e, video) {
+    $('.element1').click(function(e) {
         e.stopPropagation();
         $.fn.fullpage.moveTo(0, 4);
-        console.log(video);
-        video.src = "videos/rush.mp4";
-        video.load();
-        video.play();
+        video2.video.src = "videos/v06-07_ld.mp4";
+        video2.video.load();
+        video2.video.play();
 
     })
 

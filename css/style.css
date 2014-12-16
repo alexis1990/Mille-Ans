@@ -183,11 +183,14 @@ img{
 	position: absolute;
 	z-index: 20;
 	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
 }
 
-
-
-
+.glyphicon-fullscreen{
+	color: white;
+}
 
 /*MEDIA QUERIES*/
 
