@@ -135,10 +135,7 @@ $(document).ready(function() {
         toggleFullScreen();
     })
 
-    //FULLSCREEN WEBSITE
-    $('.share').click(function() {
-        console.log('ok');
-    })
+    //LAUNCH OTHER VIDEO
 
     $('.element1').click(function(e) {
         e.stopPropagation();
