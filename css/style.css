@@ -242,6 +242,24 @@ img{
 	color: white;
 }
 
+.fondinteractif{
+	background: url(../maquette/src/interactif.jpg);
+	background-size: cover;
+}
+
+/*INTERACTION*/
+
+.interaction1{
+
+}
+
+.interaction2{
+	
+}
+
+.interaction3{
+	
+}
 /*MEDIA QUERIES*/
 
 @media(max-width:767px){}

@@ -124,7 +124,7 @@ $(document).ready(function() {
         toggleFullScreen();
     })
 
-    //LAUNCH OTHER VIDEO
+    //ONCLICK LAUNCH OTHER VIDEO
 
     $('.element1').click(function(e) {
         e.stopPropagation();
@@ -133,7 +133,7 @@ $(document).ready(function() {
         video2.video.load();
         video2.video.play();
         video2.video.onended = function() {
-            $.fn.fullpage.moveTo(1);
+            $.fn.fullpage.moveTo(2);
         };
 
     })
@@ -146,8 +146,22 @@ $(document).ready(function() {
         video2.video.load();
         video2.video.play();
         video2.video.onended = function() {
-            $.fn.fullpage.moveTo(1);
+            $.fn.fullpage.moveTo(2);
         };
+
     })
+
+    //INTERACTION
+
+    $('.interaction1').click(function(e) {
+        e.stopPropagation();
+
+    })
+
+    $('.interaction2').click(function(e) {
+        e.stopPropagation();
+
+    })
+
 
 });
