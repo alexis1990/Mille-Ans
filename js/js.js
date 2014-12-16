@@ -22,7 +22,7 @@ $(document).ready(function() {
         }
     });
 
-    //VIDEO
+    //GENERATE PLAYER
 
     function generatePlayer(video, button, progressBar) {
 
@@ -84,17 +84,6 @@ $(document).ready(function() {
     var video1 = generatePlayer(document.getElementById('video'), document.getElementById('button'), document.getElementById('progressBar'), 'video1');
     var video2 = generatePlayer(document.getElementById('secondVideo'), document.getElementById('secondbutton'), document.getElementById('secondprogressBar'), 'video2');
 
-
-    // player.video = document.getElementById('video');
-    // player.secondVideo = document.getElementById('secondVideo');
-    // player.button = document.getElementById('button');
-    // player.pB = document.getElementById('progressBar');
-
-
-    // Player.prototype.video.onended = function() {
-    //     $.fn.fullpage.moveTo(2, 3);
-    // };
-
     video1.pB.addEventListener('click', video1.setVideoTime, false);
     video1.video.addEventListener('canplaythrough', video1.playPause, false);
     video1.video.addEventListener('click', video1.playPause, false);
@@ -139,20 +128,26 @@ $(document).ready(function() {
 
     $('.element1').click(function(e) {
         e.stopPropagation();
-        $.fn.fullpage.moveTo(0, 4);
+        $.fn.fullpage.moveTo(4);
         video2.video.src = "videos/v06-07_ld.mp4";
         video2.video.load();
         video2.video.play();
+        video2.video.onended = function() {
+            $.fn.fullpage.moveTo(1);
+        };
 
     })
 
 
     $('.element2').click(function(e) {
         e.stopPropagation();
-        $.fn.fullpage.moveTo(0, 4);
-        player.secondVideo.src = "videos/v06-07_ld.mp4";
-        player.secondVideo.load();
-        player.secondVideo.play();
+        $.fn.fullpage.moveTo(4);
+        video2.video.src = "videos/v06-07_ld.mp4";
+        video2.video.load();
+        video2.video.play();
+        video2.video.onended = function() {
+            $.fn.fullpage.moveTo(1);
+        };
     })
 
 });
