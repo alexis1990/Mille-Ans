@@ -208,15 +208,6 @@ video{
     100% {-webkit-transform: rotate(360deg);}
 }
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 /*IMAGE INTERACTIF*/
 .imgInteractive{
 	background: url(../css/image/bed.jpg) no-repeat center center;
@@ -333,7 +324,11 @@ video{
 	cursor: pointer;
 }
 
+/*INTERACTIF 2*/
 
+.fondinteractif2 img{
+
+}
 
 /*MEDIA QUERIES*/
 
