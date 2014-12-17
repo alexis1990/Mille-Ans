@@ -91,6 +91,7 @@ $(document).ready(function() {
 
     video1.listenToEvent();
     video2.listenToEvent();
+    video3.listenToEvent();
 
     //FULLSCREEN VIDEO
     jQuery(function($) {
@@ -223,7 +224,6 @@ $(document).ready(function() {
     }
     interaction2();
 
-    video3.video.pause();
     $(".vote").click(function() {
         //VOTE
         function Vote(int) {
@@ -244,5 +244,9 @@ $(document).ready(function() {
         $(".lightbox2").fadeOut(6000);
         video3.video.load();
         video3.video.play();
+        video3.button.classList.add('play');
+        video3.video.onended = function() {
+            $.fn.fullpage.moveTo(2);
+        };
     });
 });

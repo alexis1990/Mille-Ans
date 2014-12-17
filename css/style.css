@@ -150,12 +150,6 @@ video{
     100% {-webkit-transform: rotate(360deg);}
 }
 
-/* AUTRE VIDEO */
-.video1{
-	background: url(../css/image/interactif.jpg) no-repeat center center;
-	background-size: cover;
-}
-
 /*SECONDVIDEO*/
 
 #secondprogressBar{
@@ -227,6 +221,85 @@ video{
 @-webkit-keyframes loading {
     0% {-webkit-transform: rotate(0deg);}
     100% {-webkit-transform: rotate(360deg);}
+}
+
+/*THIRDVIDEO*/
+
+#thirdprogressBar{
+	width:80%;
+	height:4px;
+	border:1px solid #fff;
+	position:absolute;
+	bottom:30px;
+	left:10%;
+	opacity:.6;
+	z-index:6;
+}
+
+#thirdprogressBar span{
+	height:4px;
+	background-color:#fff;
+	display:inline-block;
+	position:absolute;
+	top:-1px;
+}
+
+#thirdprogressBar .progress{
+	z-index:7;
+}
+
+#thirdprogressBar .buffer{
+	opacity:.5;
+}
+
+#thirdbutton{
+	position:absolute;
+	bottom:4%;
+	left:7%;
+	z-index:2;
+	height:25px;
+	width:25px;
+	opacity:.6;
+	text-align:center;
+	background:transparent;transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, -o-transform,
+	transform .2s ease;
+	background: url(../css/image/play.png) no-repeat center center;
+}
+
+#thirdbutton.play{
+	-webkit-transform:scale(2);
+	-moz-transform:scale(2);
+	-ms-transform:scale(2);
+	-o-transform:scale(2);
+	transform:scale(2);
+	opacity:0;
+}
+
+#thirdbutton.loading{
+	-webkit-animation: loading 1s infinite linear;
+	-moz-animation: loading 1s infinite linear;
+	-ms-animation: loading 1s infinite linear;
+	-o-animation: loading 1s infinite linear;
+	animation: loading 1s infinite linear;
+}
+
+#thirdbutton span{
+	display:inline-block;
+	height:100px;
+	width:40px;
+	background:#fff;
+	margin:4em .5em 0 0;
+}
+
+@-webkit-keyframes loading {
+    0% {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+/* AUTRE VIDEO */
+.video1{
+	background: url(../css/image/interactif.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 /*IMAGE INTERACTIF*/
