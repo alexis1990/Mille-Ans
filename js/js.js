@@ -39,8 +39,10 @@ $(document).ready(function() {
                 var progress = self.currentTime * 100 / self.duration;
                 if (video.id == 'video') {
                     document.querySelector('.progress').style.width = progress + '%';
-                } else {
+                } else if (video.id == 'secondvideo') {
                     document.querySelector('.secondprogress').style.width = progress + '%';
+                } else {
+                    document.querySelector('.thirdprogress').style.width = progress + '%';
                 }
                 var time = self.currentTime;
                 if (video.id == 'video') {
@@ -79,21 +81,20 @@ $(document).ready(function() {
                 this.video.addEventListener('timeupdate', this.playProgress, false);
             }
         };
-        player.button.classList.add('loading');
-        player.video.load();
         return player;
     }
 
 
     var video1 = generatePlayer(document.getElementById('video'), document.getElementById('button'), document.getElementById('progressBar'), 'video1');
     var video2 = generatePlayer(document.getElementById('secondVideo'), document.getElementById('secondbutton'), document.getElementById('secondprogressBar'), 'video2');
+    var video3 = generatePlayer(document.getElementById('thirdVideo'), document.getElementById('thirdbutton'), document.getElementById('thirdprogressBar'), 'video3');
 
     video1.listenToEvent();
     video2.listenToEvent();
 
     //FULLSCREEN VIDEO
     jQuery(function($) {
-        $('#video, #secondVideo').fullscreen();
+        $('#video, #secondVideo, #thirdVideo').fullscreen();
     });
 
     //FULLSCREEN WEBSITE
@@ -185,6 +186,7 @@ $(document).ready(function() {
     }
     lightbox();
 
+
     //INTERACTION SLIDE 2
     function interaction2() {
 
@@ -221,6 +223,7 @@ $(document).ready(function() {
     }
     interaction2();
 
+    video3.video.pause();
     $(".vote").click(function() {
         //VOTE
         function Vote(int) {
@@ -238,5 +241,8 @@ $(document).ready(function() {
             xmlhttp.send();
         }
         Vote(this.value);
+        $(".lightbox2").fadeOut(6000);
+        video3.video.load();
+        video3.video.play();
     });
 });
