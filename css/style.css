@@ -403,8 +403,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	left: 350px;
-	top: 180px;
+	left: 30%;
+	top: 30%;
 	cursor: pointer;
 }
 
@@ -425,8 +425,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	left: 120px;
-	bottom: 50px;
+	left: 10%;
+	bottom: 8%;
 	cursor: pointer;
 }
 
@@ -447,8 +447,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	left: 380px;
-	bottom:70px;
+	left: 30%;
+	bottom:9%;
 	cursor: pointer;
 }
 
@@ -469,8 +469,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	left: 590px;
-	bottom:110px;
+	left: 46%;
+	bottom:17%;
 	cursor: pointer;
 }
 
@@ -491,8 +491,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	left: 790px;
-	bottom:110px;
+	left: 63%;
+	bottom:20%;
 	cursor: pointer;
 }
 
