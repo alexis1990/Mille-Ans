@@ -30,10 +30,6 @@ input {
 	background: rgba(0,0,0,0.8);
 }
 
-.section {
-	padding: 20px;
-}
-
 .section:first-child {
 	padding: 0;
 }
@@ -366,8 +362,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	right: 20%;
-	top: 20%;
+	right: 260px;
+	top: 120px;
 	cursor: pointer;
 }
 
@@ -388,8 +384,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	right: 19%;
-	top: 33%;
+	right: 220px;
+	top: 200px;
 	cursor: pointer;
 }
 
@@ -410,8 +406,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	right: 30%;
-	top: 60%;
+	right: 380px;
+	top: 400px;
 	cursor: pointer;
 }
 
@@ -432,8 +428,8 @@ video{
 	height: 15px;
 	border-radius: 150px;
 	background-color: white;
-	right: 18%;
-	top: 75%;
+	right: 180px;
+	top: 480px;
 	cursor: pointer;
 }
 
@@ -448,6 +444,7 @@ video{
 }
 
 .fondinteractif2 .texte{
+	position: absolute;
 	margin-top: 11%;
 	margin-left: 6%;
 	text-align: justify;
