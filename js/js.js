@@ -2,8 +2,10 @@ $(document).ready(function() {
 
     //SCROLLT0
     $('#fullpage').fullpage({
+        'scrollingSpeed': 1000,
         'verticalCentered': false,
         'css3': true,
+        'scrollOverflow': false,
         'resize': false,
         'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide'],
         'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#aaa', '#aaa', '#111', '#aaa', '#111', '#000', '#000', '#111'],
@@ -63,9 +65,11 @@ $(document).ready(function() {
                 if (player.video.paused) {
                     player.video.play();
                     player.button.classList.add('play');
+                    player.button.classList.remove('pause');
                 } else {
                     player.video.pause();
                     player.button.classList.remove('play');
+                    player.button.classList.add('pause');
                 }
             },
             listenToEvent: function() {
