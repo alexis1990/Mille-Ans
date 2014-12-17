@@ -291,10 +291,14 @@ video{
 }
 
 .lightbox .texte{
-	margin-top: 100px;
-	margin-left: 12%;
+	margin-top: 11%;
+	margin-left: 10%;
 	text-align: justify;
-	width: 80%;
+	width: 50%;
+}
+
+.titre{
+	font-size: 36px;
 }
 
 .interaction1{
