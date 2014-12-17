@@ -147,7 +147,7 @@ $(document).ready(function() {
 
     function lightbox() {
 
-        $('.interaction1, .interaction2, .interaction3').click(function(e) {
+        $('.interaction1, .interaction2, .interaction3, .interaction4, .interaction5').click(function(e) {
             e.stopPropagation();
             $(".lightbox").fadeIn(400);
             var className = $(this).attr('class');
@@ -161,6 +161,12 @@ $(document).ready(function() {
                 case 'interaction3':
                     $('.texte3').removeClass('hide');
                     break;
+                case 'interaction4':
+                    $('.texte4').removeClass('hide');
+                    break;
+                case 'interaction5':
+                    $('.texte5').removeClass('hide');
+                    break;
             }
         });
 
@@ -169,6 +175,8 @@ $(document).ready(function() {
             $('.texte1').addClass('hide');
             $('.texte2').addClass('hide');
             $('.texte3').addClass('hide');
+            $('.texte4').addClass('hide');
+            $('.texte5').addClass('hide');
         });
     }
     lightbox();

@@ -27,7 +27,7 @@ input {
 
 .masque {
 	width: 100%; height: 100%;
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.8);	
 }
 
 .section:first-child {
@@ -284,8 +284,10 @@ video{
 }
 
 .fondinteractif{
-	background: url(../css/image/interactif.jpg) no-repeat center center;
-	background-size:100% auto;
+	background: url(../css/image/bureau.jpg) no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
 }
 
 /*INTERACTION*/
@@ -309,43 +311,117 @@ video{
 
 .titre{
 	font-size: 30px;
-	width: 110%;
+	width: 120%;
 }
 
 .interaction1{
 	position: absolute;
 	z-index: 20;
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
 	border-radius: 150px;
-	background-color: red;
-	left: 50%;
-	top: 30%;
+	background-color: white;
+	left: 350px;
+	top: 180px;
 	cursor: pointer;
+}
+
+.fondinteractif .interaction1:hover{
+	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, -o-transform,
+	transform .2s ease;
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);
 }
 
 .interaction2{
 	position: absolute;
 	z-index: 20;
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
 	border-radius: 150px;
-	background-color: blue;
-	left: 30%;
-	top: 50%;
+	background-color: white;
+	left: 120px;
+	bottom: 50px;
 	cursor: pointer;
+}
+
+.fondinteractif .interaction2:hover{
+	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, -o-transform,
+	transform .2s ease;
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);
 }
 
 .interaction3{
 	position: absolute;
 	z-index: 20;
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
 	border-radius: 150px;
-	background-color: green;
-	left: 40%;
-	top: 70%;
+	background-color: white;
+	left: 380px;
+	bottom:70px;
 	cursor: pointer;
+}
+
+.fondinteractif .interaction3:hover{
+	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, -o-transform,
+	transform .2s ease;
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);
+}
+
+.interaction4{
+	position: absolute;
+	z-index: 20;
+	width: 15px;
+	height: 15px;
+	border-radius: 150px;
+	background-color: white;
+	left: 590px;
+	bottom:110px;
+	cursor: pointer;
+}
+
+.fondinteractif .interaction4:hover{
+	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, -o-transform,
+	transform .2s ease;
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);
+}
+
+.interaction5{
+	position: absolute;
+	z-index: 20;
+	width: 15px;
+	height: 15px;
+	border-radius: 150px;
+	background-color: white;
+	left: 790px;
+	bottom:110px;
+	cursor: pointer;
+}
+
+.fondinteractif .interaction5:hover{
+	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, -o-transform,
+	transform .2s ease;
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	transform:scale(1.5);
 }
 
 /*IMAGE INTERACTIVE*/
@@ -446,10 +522,10 @@ video{
 .fondinteractif2 .texte{
 	position: absolute;
 	margin-top: 11%;
-	margin-left: 6%;
+	margin-left: 130px;
 	text-align: justify;
 	color: white;
-	width: 45%;
+	width: 540px;
 }
 /*INTERACTIF 2*/
 
