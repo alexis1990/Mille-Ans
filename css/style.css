@@ -260,8 +260,8 @@ video{
 	height: 50px;
 	opacity:.6;
 	position: absolute;
-	top:93%;
-	left:90%;
+	bottom:2%;
+	right:5%;
 	z-index: 20;
 	cursor: pointer;
 	background-color: transparent;
@@ -275,7 +275,7 @@ video{
 
 .fondinteractif{
 	background: url(../css/image/interactif.jpg) no-repeat center center;
-	background-size:100% auto;
+	background-size: cover;
 }
 
 /*INTERACTION*/
