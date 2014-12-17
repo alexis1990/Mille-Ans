@@ -208,13 +208,6 @@ video{
     100% {-webkit-transform: rotate(360deg);}
 }
 
-
-img{
-    vertical-align: middle;
-    max-height:50px;
-    max-width: 50px;
-}
-
 /*IMAGE INTERACTIF*/
 .imgInteractive{
 	background: url(../css/image/bed.jpg) no-repeat center center;
@@ -285,7 +278,7 @@ img{
 	color: white;
 	position: absolute;
 	z-index: 20;
-	cursor: crosshair;
+	cursor: url(../css/image/close.png), auto;
 }
 
 .lightbox .texte{
@@ -330,6 +323,7 @@ img{
 	top: 70%;
 	cursor: pointer;
 }
+
 
 /*MEDIA QUERIES*/
 
