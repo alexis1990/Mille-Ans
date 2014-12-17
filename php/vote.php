@@ -27,18 +27,18 @@ fclose($fp);
 ?>
 
 <h2>Result:</h2>
-<table>
+<table class="results">
 	<tr>
 	<td>Yes:</td>
 		<td>
-			<img src="pollyes.jpg" width='<?php echo(100*round($yes/($no+$yes),2)); ?>' height='20'>
+			<img src="pollyes.jpg" width='20' height='<?php echo(100*round($yes/($no+$yes),2)); ?>'>
 			<?php echo(100*round($yes/($no+$yes),2)); ?>%
 		</td>
 	</tr>
 	<tr>
 	<td>No:</td>
 		<td>
-			<img src="pollno.jpg" width='<?php echo(100*round($no/($no+$yes),2)); ?>' height='20'>
+			<img src="pollno.jpg" width='20' height='<?php echo(100*round($no/($no+$yes),2)); ?>'>
 			<?php echo(100*round($no/($no+$yes),2)); ?>%
 		</td>
 	</tr>

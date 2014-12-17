@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
     //SCROLLT0
-
     $('#fullpage').fullpage({
-
         'verticalCentered': false,
         'css3': true,
         'resize': false,
@@ -23,9 +21,7 @@ $(document).ready(function() {
     });
 
     //GENERATE PLAYER
-
     function generatePlayer(video, button, progressBar) {
-
         var player = {
             video: video,
             button: button,
@@ -79,10 +75,8 @@ $(document).ready(function() {
                 this.video.addEventListener('timeupdate', this.playProgress, false);
             }
         };
-
         player.button.classList.add('loading');
         player.video.load();
-
         return player;
     }
 
@@ -124,7 +118,6 @@ $(document).ready(function() {
     })
 
     //ONCLICK LAUNCH OTHER VIDEO
-
     $('.element1').click(function(e) {
         e.stopPropagation();
         $.fn.fullpage.moveTo(7);
@@ -136,7 +129,6 @@ $(document).ready(function() {
         };
 
     })
-
 
     $('.element2').click(function(e) {
         e.stopPropagation();
@@ -150,7 +142,7 @@ $(document).ready(function() {
 
     })
 
-    //INTERACTION
+    //INTERACTION SLIDE 1
     $(".lightbox").hide(400);
 
     function lightbox() {
@@ -182,7 +174,6 @@ $(document).ready(function() {
     lightbox();
 
     //INTERACTION SLIDE 2
-
     function interaction2() {
 
         $('.inter1, .inter2, .inter3').click(function(e) {
@@ -209,4 +200,22 @@ $(document).ready(function() {
     }
     interaction2();
 
+    $(".vote").click(function() {
+        //VOTE
+        function Vote(int) {
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else { // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("poll").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "php/vote.php?vote=" + int, true);
+            xmlhttp.send();
+        }
+        Vote(this.value);
+    });
 });

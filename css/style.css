@@ -45,6 +45,11 @@ input {
 	position: relative;
 }
 
+.results tr{
+	display: inline-block;
+	vertical-align: bottom;
+}
+
 #poll {
 	position: absolute;
 	bottom: 10%;
