@@ -209,8 +209,6 @@ video{
 }
 
 
-
-
 /*IMAGE INTERACTIF*/
 .imgInteractive{
 	background: url(../css/image/bed.jpg) no-repeat center center;
@@ -327,62 +325,6 @@ video{
 	cursor: pointer;
 }
 
-/*LAST SLIDE*/
-.container{
-	display: block;
-	position: relative;
-	top:20%;
-}
-.lastChap1{
-	position: absolute;
-	top: 5%;
-	left: 75px;
-	font-size: 36px;
-	color:white;
-}
-
-.lastChap2{
-	position: absolute;
-	top: 15%;
-	left: 75px;
-	font-size: 20px;
-	color:white;
-}
-
-.bloc1{	
-	margin-bottom: 20px;
-}
-
-.bloc2{
-	width: 100%;
-	height:30px;
-	background-color: black;
-	opacity: 0.5;
-	position: relative;
-	top:80%;
-}
-
-.fond1{
-	background: url(../css/image/temple.jpg) no-repeat;
-	background-size: cover;
-	width: 230px;
-	height: 140px;
-}
-
-.fond1 p{
-	font-size: 16px;
-	text-decoration: none;
-	color: white;
-	position: relative;
-	top:55%;
-	padding: 10px;
-	z-index:30;
-}
-
-.fond1:hover{
-	background: (0,0,0);
-	opacity: 0.7;
-}
 
 /*MEDIA QUERIES*/
 
