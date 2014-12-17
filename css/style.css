@@ -302,12 +302,6 @@ video{
 	background-size: cover;
 }
 
-/*IMAGE INTERACTIF*/
-.imgInteractive{
-	background: url(../css/image/bed.jpg) no-repeat center center;
-	background-size: cover;
-}
-
 /*ELEMENTS*/
 .element1{
 	position: absolute;
@@ -360,9 +354,6 @@ video{
 
 .fondinteractif{
 	background: url(../css/image/bureau.jpg) no-repeat;
-	background-size: contain;
-	width: 100%;
-	height: 100%;
 }
 
 /*INTERACTION*/
