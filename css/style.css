@@ -34,6 +34,10 @@ input {
 	padding: 20px;
 }
 
+.section:first-child {
+	padding: 0;
+}
+
 /*SONDAGE*/
 #slide-sondage {
 	background: url(../css/image/interactif.jpg) no-repeat center center;
