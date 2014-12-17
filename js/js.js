@@ -176,7 +176,7 @@ $(document).ready(function() {
     //INTERACTION SLIDE 2
     function interaction2() {
 
-        $('.inter1, .inter2, .inter3').click(function(e) {
+        $('.inter1, .inter2, .inter3, .inter4').click(function(e) {
             e.stopPropagation();
             var className = $(this).attr('class');
             switch (className) {
@@ -184,16 +184,25 @@ $(document).ready(function() {
                     $('.texte1').removeClass('hide');
                     $('.texte2').addClass('hide');
                     $('.texte3').addClass('hide');
+                    $('.texte4').addClass('hide');
                     break;
                 case 'inter2':
                     $('.texte1').addClass('hide');
                     $('.texte2').removeClass('hide');
                     $('.texte3').addClass('hide');
+                    $('.texte4').addClass('hide');
                     break;
                 case 'inter3':
                     $('.texte1').addClass('hide');
                     $('.texte2').addClass('hide');
                     $('.texte3').removeClass('hide');
+                    $('.texte4').addClass('hide');
+                    break;
+                case 'inter4':
+                    $('.texte1').addClass('hide');
+                    $('.texte2').addClass('hide');
+                    $('.texte3').addClass('hide');
+                    $('.texte4').removeClass('hide');
                     break;
             }
         });
