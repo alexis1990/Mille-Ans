@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 114||5
 =======
 70||5
 >>>>>>> FETCH_HEAD
+=======
+71||5
+>>>>>>> Stashed changes

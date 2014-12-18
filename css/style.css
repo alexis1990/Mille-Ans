@@ -72,7 +72,7 @@ input {
 #poll {
 	position: absolute;
 	z-index: 20;
-	bottom: 10%;
+	bottom: 20%;
 	left: 75px;
 	color: #fff;
 	width: 100%;
