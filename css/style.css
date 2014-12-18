@@ -11,10 +11,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
-h3 {
-
-}
-
 input {
 	display: none;
 }
@@ -33,7 +29,7 @@ input {
 
 .masque {
 	width: 100%; height: 100%;
-	background: rgba(0,0,0,0.8);	
+	background: rgba(0,0,0,0.9);	
 }
 
 .progressBar {
@@ -178,28 +174,25 @@ video{
 }
 
 /*ELEMENTS*/
-.element1{
+
+[class^=element] {
 	position: absolute;
 	z-index: 50;
-	cursor: pointer;
-	margin-left:500px;
-	margin-top:300px;
 	width: 100px;
 	height: 100px;
-	background-color: black;
 	cursor: pointer;
 }
 
+.element1{
+	margin-left:500px;
+	margin-top:300px;
+	background-color: black;
+}
+
 .element2{
-	position: absolute;
-	z-index: 50;
-	cursor: pointer;
 	margin-left:1000px;
 	margin-top:300px;
-	width: 100px;
-	height: 100px;
 	background-color: red;
-	cursor: pointer;
 }
 
 .hide{
@@ -249,12 +242,9 @@ video{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0, 0.7);
-<<<<<<< HEAD
-=======
 	color: white;
 	position: absolute;
 	z-index: 20;
->>>>>>> origin/master
 }
 
 .texte{
