@@ -37,10 +37,11 @@ $(document).ready(function() {
             }
         },
         afterLoad: function(anchorLink, index) {
-            if (index == 6) {
-                video1.video.src = "videos/chapitre3.mp4";
-                video1.video.load();
-            }
+            // if (index == 7) {
+            //     video2.video.src = "videos/interview1.mp4";
+            //     video2.video.load();
+            //     $('.video').fadeIn(400);
+            // }
         }
     });
 
@@ -151,8 +152,7 @@ $(document).ready(function() {
     $('.element1').on('click', function(e) {
         e.stopPropagation();
         $.fn.fullpage.moveTo(7);
-        video2.video.src = "videos/v06-07_ld.mp4";
-        video2.video.load();
+        video2.video.src = "videos/interview1.mp4";
         video2.video.play();
         video2.video.onended = function() {
             $.fn.fullpage.moveTo(6);
@@ -163,8 +163,7 @@ $(document).ready(function() {
     $('.element2').on('click', function(e) {
         e.stopPropagation();
         $.fn.fullpage.moveTo(7);
-        video2.video.src = "videos/v06-07_ld.mp4";
-        video2.video.load();
+        video2.video.src = "videos/interview2.mp4";
         video2.video.play();
         video2.video.onended = function() {
             $.fn.fullpage.moveTo(6);

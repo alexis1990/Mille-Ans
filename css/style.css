@@ -340,6 +340,7 @@ video{
 
 #about .content{
 	position: absolute;
+	z-index: 1;
 	bottom: 40px;
 }
 
