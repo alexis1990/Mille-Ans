@@ -1,12 +1,17 @@
 /*GLOBAL*/
 
 html, body {
-	font-family: 'Avenir-Medium', serif;
+	font-family: 'Avenir-Book', serif;
+	font-size: 22px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	font-weight: normal;
+}
+
+h3 {
+
 }
 
 input {
@@ -28,35 +33,6 @@ input {
 .masque {
 	width: 100%; height: 100%;
 	background: rgba(0,0,0,0.8);	
-}
-
-.section:first-child {
-	padding: 0;
-}
-
-h4 {
-	text-transform: uppercase;
-	color: #666;
-	font-family: 'Avenir-Black';
-	font-size: 14px;
-}
-
-#source a {
-	color: #fff;
-	text-decoration: none;
-	border-bottom: 2px solid #fff;
-	padding-bottom: 2px;
-	font-size: 24px;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-li {
-	list-style: none;
-	margin-top: 10px;
 }
 
 .progressBar {
@@ -155,7 +131,7 @@ video{
 
 .button{
 	position:absolute;
-	bottom:4%;
+	bottom:40px;
 	left:7%;
 	z-index:2;
 	height:15px;
@@ -251,7 +227,8 @@ video{
 }
 
 .fondinteractif{
-	background: url(../css/image/bureau.jpg) no-repeat;
+	background: url(../css/image/bureau.jpg) no-repeat center;
+	background-size: cover;
 }
 
 /*INTERACTION*/
@@ -259,7 +236,7 @@ video{
 .lightbox{
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0, 0.7);
+	background-color: rgba(0,0,0, 0.9);
 	color: white;
 	position: absolute;
 	z-index: 20;
@@ -273,15 +250,18 @@ video{
 	color: white;
 }
 
-.lightbox .texte{
-	margin-top: 11%;
-	margin-left: 10%;
+.texte{
+	position: absolute;
+	transform-origin: bottom left;
+	bottom: 50px;
+	left: 150px;
 	text-align: left;
 	width: 50%;
 }
 
 .titre{
-	font-size: 30px;
+	font-size: 48px;
+	font-family: 'Avenir-Heavy';
 	width: 120%;
 }
 
