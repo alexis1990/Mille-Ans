@@ -11,7 +11,7 @@ $(document).ready(function() {
         'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#aaa', '#aaa', '#111', '#aaa', '#111', '#000', '#000', '#111', '#000'],
         'navigation': true,
         'navigationPosition': 'left',
-        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide', 'thirteenthSlide'],
+        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide', 'nineSLide', 'tenSlide', 'elevenSlide', 'twelvesthSlide'],
 
         onLeave: function(index, nextIndex, direction) {
             if (index == 1 && direction == 'down') {
@@ -20,8 +20,18 @@ $(document).ready(function() {
                 }
             } else if (index == 3 && direction == 'down') {
                 $('.section').eq(index - 1).removeClass('moveDown').addClass('moveUp');
+                if (video4.video.paused == false) {
+                    video4.video.pause();
+                }
             } else if (index == 3 && direction == 'up') {
                 $('.section').eq(index - 1).removeClass('moveUp').addClass('moveDown');
+                if (video4.video.paused == false) {
+                    video4.video.pause();
+                }
+            } else if (index == 5 && direction == 'down') {
+                if (video5.video.paused == false) {
+                    video5.video.pause();
+                }
             } else if (index == 6 && direction == 'down') {
                 if (video.paused == false) {
                     video.pause();
@@ -34,6 +44,14 @@ $(document).ready(function() {
                 if (video2.video.paused == false) {
                     video2.video.pause();
                 }
+            } else if (index == 8 && direction == 'down') {
+                if (video6.video.paused == false) {
+                    video6.video.pause();
+                }
+            } else if (index == 9 && direction == 'down') {
+                if (video7.video.paused == false) {
+                    video7.video.pause();
+                }
             }
         },
         afterLoad: function(anchorLink, index) {
@@ -42,6 +60,39 @@ $(document).ready(function() {
             //     video2.video.load();
             //     $('.video').fadeIn(400);
             // }
+
+            if (index == 3) {
+                video4.video.src = "videos/rush.mp4";
+                video4.video.load();
+                video4.listenToEvent();
+                video4.video.onended = function() {
+                    $.fn.fullpage.moveTo(4);
+                };
+            }
+            if (index == 5) {
+                video5.video.src = "videos/rush.mp4";
+                video5.video.load();
+                video5.listenToEvent();
+                video5.video.onended = function() {
+                    $.fn.fullpage.moveTo(6);
+                };
+            }
+            if (index == 8) {
+                video6.video.src = "videos/rush.mp4";
+                video6.video.load();
+                video6.listenToEvent();
+                video6.video.onended = function() {
+                    $.fn.fullpage.moveTo(9);
+                };
+            }
+            if (index == 9) {
+                video7.video.src = "videos/rush.mp4";
+                video7.video.load();
+                video7.listenToEvent();
+                video7.video.onended = function() {
+                    $.fn.fullpage.moveTo(9);
+                };
+            }
         }
     });
 
@@ -64,8 +115,16 @@ $(document).ready(function() {
                     document.querySelector('.progress').style.width = progress + '%';
                 } else if (video.id == 'secondVideo') {
                     document.querySelector('.secondprogress').style.width = progress + '%';
-                } else {
+                } else if (video.id == 'thirdVideo') {
                     document.querySelector('.thirdprogress').style.width = progress + '%';
+                } else if (video.id == 'fourthVideo') {
+                    document.querySelector('.fourthprogress').style.width = progress + '%';
+                } else if (video.id == 'fifthVideo') {
+                    document.querySelector('.fifthprogress').style.width = progress + '%';
+                } else if (video.id == 'sixVideo') {
+                    document.querySelector('.sixprogress').style.width = progress + '%';
+                } else if (video.id == 'sevenVideo') {
+                    document.querySelector('.sevenprogress').style.width = progress + '%';
                 }
                 var time = self.currentTime;
                 if (video.id == 'video') {
@@ -111,16 +170,18 @@ $(document).ready(function() {
     var video1 = generatePlayer(document.getElementById('video'), document.getElementById('button'), document.getElementById('progressBar'), 'video1');
     var video2 = generatePlayer(document.getElementById('secondVideo'), document.getElementById('secondbutton'), document.getElementById('secondprogressBar'), 'video2');
     var video3 = generatePlayer(document.getElementById('thirdVideo'), document.getElementById('thirdbutton'), document.getElementById('thirdprogressBar'), 'video3');
+    var video4 = generatePlayer(document.getElementById('fourthVideo'), document.getElementById('fourthbutton'), document.getElementById('fourthprogressBar'), 'video4');
+    var video5 = generatePlayer(document.getElementById('fifthVideo'), document.getElementById('fifthbutton'), document.getElementById('fifthprogressBar'), 'video5');
+    var video6 = generatePlayer(document.getElementById('sixVideo'), document.getElementById('sixbutton'), document.getElementById('sixprogressBar'), 'video6');
+    var video7 = generatePlayer(document.getElementById('sevenVideo'), document.getElementById('sevenbutton'), document.getElementById('sevenprogressBar'), 'video6');
 
     video1.listenToEvent();
     video2.listenToEvent();
     video3.listenToEvent();
 
-
-
     //FULLSCREEN VIDEO
     jQuery(function($) {
-        $('#video, #secondVideo, #thirdVideo').fullscreen();
+        $('#video, #secondVideo, #thirdVideo, #fourthVideo, #fifthVideo, #sixVideo, #sevenVideo').fullscreen();
     });
 
     //FULLSCREEN WEBSITE
@@ -173,15 +234,36 @@ $(document).ready(function() {
 
     //CHOOSE YOUR SECTION
     $('.back').on('click', function() {
-        console.log('ok');
+        $(".lightbox3").fadeIn(400);
+        var className = $(this).attr('class');
+        $(".texte1").removeClass('hide');
+
+        $(".lightbox3").on('click', function() {
+            $(".lightbox").fadeOut(400);
+            $('.texte1').addClass('hide');
+        });
     })
 
     $('.back2').on('click', function() {
-        console.log('ok2');
+        $(".lightbox3").fadeIn(400);
+        var className = $(this).attr('class');
+        $(".texte2").removeClass('hide');
+
+        $(".lightbox3").on('click', function() {
+            $(".lightbox").fadeOut(400);
+            $('.texte2').addClass('hide');
+        });
     })
 
     $('.back3').on('click', function() {
-        console.log('ok3');
+        $(".lightbox3").fadeIn(400);
+        var className = $(this).attr('class');
+        $(".texte3").removeClass('hide');
+
+        $(".lightbox3").on('click', function() {
+            $(".lightbox").fadeOut(400);
+            $('.texte3').addClass('hide');
+        });
     })
 
 
