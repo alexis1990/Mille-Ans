@@ -20,22 +20,22 @@
 
 	<div id="fullpage">
 		<div class="section">
-				<div id="thirdbutton"></div>
+				<div class="button" id="thirdbutton"></div>
 				<video id="thirdVideo" autoplay="false">
 				    <source src="videos/rush.mp4" type='video/mp4'>
 				    <p>Your user agent does not support the HTML5 Video element.</p>
 				</video>
-				<div id="thirdprogressBar">
+				<div id="thirdprogressBar" class="progressBar">
 				    <span class="thirdprogress"></span>
 				    <span class="thirdbuffer"></span>
 				</div>
 			<div class="lightbox2">
 				<div id="poll">
-					<h3>Pensez vous pouvoir vivre plus de 1000 ans?</h3>
+					<h3>Pensez vous pouvoir vivre plus de 1000 ans ?</h3>
 					<form>
-						<label for="poll-oui">— Oui</label>
+						<label class="question" for="poll-oui">Oui</label>
 						<input type="radio" name="vote" class="vote" id="poll-oui" value="1">
-						<label for="poll-non">— Non</label>
+						<label class="question" for="poll-non">Non</label>
 						<input type="radio" name="vote" class="vote" id="poll-non" value="0">
 					</form>
 				</div>
@@ -107,7 +107,7 @@
 		</div>
 
 		<div class="section">
-			<div id="button"></div>
+			<div class="button" id="button"></div>
 			<video id="video" autoplay="false">
 			    <source src="videos/rush.mp4" type='video/mp4'>
 			    <p>
@@ -116,7 +116,7 @@
 			</video>
 			<div class="hide element1"></div>
 			<div class="hide element2"></div>
-			<div id="progressBar">
+			<div id="progressBar" class="progressBar">
 			    <span class="progress"></span>
 			    <span class="buffer"></span>
 			</div>
@@ -125,7 +125,7 @@
 
 
 		<div class="section">
-			<div id="secondbutton"></div>
+			<div class="button" id="secondbutton"></div>
 
 			<video id="secondVideo" autoplay="false">
 			    <source src="videos/rush.mp4" type='video/mp4'>
@@ -134,7 +134,7 @@
 			    </p>
 			</video>
 
-			<div id="secondprogressBar">
+			<div id="secondprogressBar" class="progressBar">
 			    <span class="secondprogress"></span>
 			    <span class="secondbuffer"></span>
 			</div>
@@ -214,8 +214,26 @@
 			</div>	
 		</div>
 
-		<div class="section">
+		<div class="section" id="source">
+			<h2>Médiathèque</h2>
+			<h4>— Philosophique</h4>
+				<ul>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+				</ul>
+
+			<h4>— Sociologiques</h4>
+			<h4>— Autre</h4>
+
 		</div>
+
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
