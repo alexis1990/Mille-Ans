@@ -165,7 +165,7 @@ $(document).ready(function() {
     })
 
     //CHOOSE YOUR SECTION
-    $('.back').hover(function() {
+    $('.back').click(function() {
         console.log('ok');
     })
 
