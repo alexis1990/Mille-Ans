@@ -35,6 +35,12 @@ $(document).ready(function() {
                     video2.video.pause();
                 }
             }
+        },
+        afterLoad: function(anchorLink, index) {
+            if (index == 6) {
+                video1.video.src = "videos/chapitre3.mp4";
+                video1.video.load();
+            }
         }
     });
 
@@ -109,13 +115,15 @@ $(document).ready(function() {
     video2.listenToEvent();
     video3.listenToEvent();
 
+
+
     //FULLSCREEN VIDEO
     jQuery(function($) {
         $('#video, #secondVideo, #thirdVideo').fullscreen();
     });
 
     //FULLSCREEN WEBSITE
-    $('.fullscreen').click(function() {
+    $('.fullscreen').on('click', function() {
         function toggleFullScreen() {
             if ((document.fullScreenElement && document.fullScreenElement !== null) ||
                 (!document.mozFullScreen && !document.webkitIsFullScreen)) {
@@ -140,7 +148,7 @@ $(document).ready(function() {
     })
 
     //ONCLICK LAUNCH OTHER VIDEO
-    $('.element1').click(function(e) {
+    $('.element1').on('click', function(e) {
         e.stopPropagation();
         $.fn.fullpage.moveTo(7);
         video2.video.src = "videos/v06-07_ld.mp4";
@@ -152,7 +160,7 @@ $(document).ready(function() {
 
     })
 
-    $('.element2').click(function(e) {
+    $('.element2').on('click', function(e) {
         e.stopPropagation();
         $.fn.fullpage.moveTo(7);
         video2.video.src = "videos/v06-07_ld.mp4";
@@ -165,15 +173,15 @@ $(document).ready(function() {
     })
 
     //CHOOSE YOUR SECTION
-    $('.back').click(function() {
+    $('.back').on('click', function() {
         console.log('ok');
     })
 
-    $('.back2').hover(function() {
+    $('.back2').on('click', function() {
         console.log('ok2');
     })
 
-    $('.back3').hover(function() {
+    $('.back3').on('click', function() {
         console.log('ok3');
     })
 
@@ -183,7 +191,7 @@ $(document).ready(function() {
 
     function lightbox() {
 
-        $('.interaction1, .interaction2, .interaction3, .interaction4, .interaction5').click(function(e) {
+        $('.interaction1, .interaction2, .interaction3, .interaction4, .interaction5').on('click', function(e) {
             e.stopPropagation();
             $(".lightbox").fadeIn(400);
             var className = $(this).attr('class');
@@ -206,7 +214,7 @@ $(document).ready(function() {
             }
         });
 
-        $(".lightbox").click(function() {
+        $(".lightbox").on('click', function() {
             $(".lightbox").fadeOut(400);
             $('.texte1').addClass('hide');
             $('.texte2').addClass('hide');
@@ -221,7 +229,7 @@ $(document).ready(function() {
     //INTERACTION SLIDE 2
     function interaction2() {
 
-        $('.inter1, .inter2, .inter3, .inter4').click(function(e) {
+        $('.inter1, .inter2, .inter3, .inter4').on('click', function(e) {
             e.stopPropagation();
             var className = $(this).attr('class');
             switch (className) {
@@ -254,7 +262,8 @@ $(document).ready(function() {
     }
     interaction2();
 
-    $(".vote").click(function() {
+    $(".vote").on('click', function(e) {
+        e.stopPropagation();
         //VOTE
         function Vote(int) {
             if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -271,9 +280,10 @@ $(document).ready(function() {
             xmlhttp.send();
         }
         Vote(this.value);
+
         $(".lightbox2").fadeOut(6000);
+        video3.video.src = "videos/chapitre1.mp4";
         video3.video.load();
-        video3.video.play();
         video3.button.classList.add('play');
         video3.video.onended = function() {
             $.fn.fullpage.moveTo(2);
