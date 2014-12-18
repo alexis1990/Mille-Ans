@@ -2,7 +2,7 @@
 
 html, body {
 	font-family: 'Avenir-Book', serif;
-	font-size: 22px;
+	font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -314,8 +314,22 @@ video{
 	color: white;
 	width: 540px;
 }
-/*INTERACTIF 2*/
 
+/*CHOOSE*/
+
+.back{
+	height: 100%;
+	background-color: red;
+}
+.back2{
+	height: 100%;
+	background-color: green;
+}
+
+.back3{
+	height: 100%;
+	background-color: blue;
+}
 
 /*MEDIA QUERIES*/
 

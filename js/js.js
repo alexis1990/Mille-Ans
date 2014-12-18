@@ -164,6 +164,20 @@ $(document).ready(function() {
 
     })
 
+    //CHOOSE YOUR SECTION
+    $('.back').hover(function() {
+        console.log('ok');
+    })
+
+    $('.back2').hover(function() {
+        console.log('ok2');
+    })
+
+    $('.back3').hover(function() {
+        console.log('ok3');
+    })
+
+
     //INTERACTION SLIDE 1
     $(".lightbox").hide(400);
 
