@@ -7,11 +7,11 @@ $(document).ready(function() {
         'css3': true,
         'scrollOverflow': false,
         'resize': false,
-        'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide'],
-        'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#aaa', '#aaa', '#111', '#aaa', '#111', '#000', '#000', '#111'],
+        'anchors': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'eightSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide', 'thirteenthSlide'],
+        'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#aaa', '#aaa', '#111', '#aaa', '#111', '#000', '#000', '#111', '#000'],
         'navigation': true,
         'navigationPosition': 'left',
-        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide'],
+        'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide', 'thirteenthSlide'],
 
         onLeave: function(index, nextIndex, direction) {
             if (index == 1 && direction == 'down') {

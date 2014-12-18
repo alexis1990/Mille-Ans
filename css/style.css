@@ -10,8 +10,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
-h3 {
-
+h2 {
+	font-size: 36px;
+	color: #fff;
+	font-family: 'Avenir-Heavy';
+	margin-bottom: 15px;
 }
 
 input {
@@ -23,6 +26,10 @@ input {
 	display: block;
 	position: absolute;
 	z-index: 9999;
+}
+
+a, a:hover {
+	color: #fff;
 }
 
 #bar-top {width: 100%; height: 15px; top: 0;}
@@ -177,28 +184,26 @@ video{
 }
 
 /*ELEMENTS*/
-.element1{
+
+[class^=element]{
 	position: absolute;
 	z-index: 50;
 	cursor: pointer;
-	margin-left:500px;
-	margin-top:300px;
 	width: 100px;
 	height: 100px;
-	background-color: black;
 	cursor: pointer;
 }
 
+.element1{
+	margin-left:500px;
+	margin-top:300px;
+	background-color: black;
+}
+
 .element2{
-	position: absolute;
-	z-index: 50;
-	cursor: pointer;
 	margin-left:1000px;
 	margin-top:300px;
-	width: 100px;
-	height: 100px;
 	background-color: red;
-	cursor: pointer;
 }
 
 .hide{
@@ -330,6 +335,73 @@ video{
 	height: 100%;
 	background-color: blue;
 }
+
+/*ABOUT*/
+
+#about .content{
+	position: absolute;
+	bottom: 40px;
+}
+
+#about p {
+	font-size: 18px;
+	color: #fff;
+	line-height: 1.5em;
+}
+
+.content {
+	width: 1100px;
+	margin-left: 120px;
+}
+
+#thanks {
+	margin-top: 75px;
+}
+
+.thanks-id {
+	display: inline-block;
+	margin-right: 25px;
+}
+
+.thanks-id:last-child {
+	margin-right: 0;
+}
+
+.thanks-id p:first-child{
+	color: #ccc!important;
+	font-family: 'Avenir-Heavy';
+	text-transform: uppercase;
+	font-size: 12px!important;
+	margin: 0;
+}
+
+.thanks-id p:last-child{
+	font-family: 'Avenir-Black';
+	font-size: 24px!important;
+	margin: 0;
+}
+
+#sociaux {
+	margin-top: 75px;
+}
+
+#sociaux p:first-child{
+	color: #ccc;
+	font-size: 12px!important;
+	text-transform: uppercase;
+	font-family: 'Avenir-Heavy';
+	margin-bottom: 10px;
+}
+
+#sociaux a {
+	font-family: 'Avenir-Black';
+}
+
+#sociaux p:last-child {
+	margin-top: -10px;
+}
+
+
 
 /*MEDIA QUERIES*/
 
