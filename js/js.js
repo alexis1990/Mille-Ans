@@ -53,7 +53,6 @@ $(document).ready(function() {
             playProgress: function() {
                 var self = this;
                 var progress = self.currentTime * 100 / self.duration;
-                console.log(video.id);
                 if (video.id == 'video') {
                     document.querySelector('.progress').style.width = progress + '%';
                 } else if (video.id == 'secondVideo') {
