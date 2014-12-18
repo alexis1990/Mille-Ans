@@ -353,7 +353,11 @@ video{
 }
 
 .fondinteractif{
-	background: url(../css/image/bureau.jpg) no-repeat;
+	background: url(../css/image/bureau.jpg) no-repeat center center;   
+	-webkit-background-size: cover;   
+	-moz-background-size: cover;   
+	-o-background-size: cover;   
+	background-size: cover;
 }
 
 /*INTERACTION*/
@@ -373,6 +377,8 @@ video{
 	height: 100%;
 	background-color: rgba(0,0,0, 0.7);
 	color: white;
+	position: absolute;
+	z-index: 20;
 }
 
 .lightbox .texte{

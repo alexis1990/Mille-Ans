@@ -14,10 +14,26 @@ $(document).ready(function() {
         'navigationTooltips': ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fiveSlide', 'sixSlide', 'sevenSlide', 'nineSlide', 'tenSLide', 'elevenSlide', 'twelveSlide'],
 
         onLeave: function(index, nextIndex, direction) {
-            if (index == 3 && direction == 'down') {
+            if (index == 1 && direction == 'down') {
+                if (video3.video.paused == false) {
+                    video3.video.pause();
+                }
+            } else if (index == 3 && direction == 'down') {
                 $('.section').eq(index - 1).removeClass('moveDown').addClass('moveUp');
             } else if (index == 3 && direction == 'up') {
                 $('.section').eq(index - 1).removeClass('moveUp').addClass('moveDown');
+            } else if (index == 6 && direction == 'down') {
+                if (video.paused == false) {
+                    video.pause();
+                }
+            } else if (index == 7 && direction == 'down') {
+                if (video2.video.paused == false) {
+                    video2.video.pause();
+                }
+            } else if (index == 7 && direction == 'up') {
+                if (video2.video.paused == false) {
+                    video2.video.pause();
+                }
             }
         }
     });
@@ -37,9 +53,10 @@ $(document).ready(function() {
             playProgress: function() {
                 var self = this;
                 var progress = self.currentTime * 100 / self.duration;
+                console.log(video.id);
                 if (video.id == 'video') {
                     document.querySelector('.progress').style.width = progress + '%';
-                } else if (video.id == 'secondvideo') {
+                } else if (video.id == 'secondVideo') {
                     document.querySelector('.secondprogress').style.width = progress + '%';
                 } else {
                     document.querySelector('.thirdprogress').style.width = progress + '%';
