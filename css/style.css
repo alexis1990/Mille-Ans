@@ -2,13 +2,16 @@
 
 html, body {
 	font-family: 'Avenir-Book', serif;
-	font-size: 22px;
-	color: #fff;
+	font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	font-weight: normal;
+}
+
+h3 {
+
 }
 
 input {
@@ -29,7 +32,7 @@ input {
 
 .masque {
 	width: 100%; height: 100%;
-	background: rgba(0,0,0,0.9);	
+	background: rgba(0,0,0,0.8);	
 }
 
 .progressBar {
@@ -69,7 +72,7 @@ input {
 #poll {
 	position: absolute;
 	z-index: 20;
-	bottom: 20%;
+	bottom: 10%;
 	left: 75px;
 	color: #fff;
 	width: 100%;
@@ -174,25 +177,28 @@ video{
 }
 
 /*ELEMENTS*/
-
-[class^=element] {
+.element1{
 	position: absolute;
 	z-index: 50;
+	cursor: pointer;
+	margin-left:500px;
+	margin-top:300px;
 	width: 100px;
 	height: 100px;
+	background-color: black;
 	cursor: pointer;
 }
 
-.element1{
-	margin-left:500px;
-	margin-top:300px;
-	background-color: black;
-}
-
 .element2{
+	position: absolute;
+	z-index: 50;
+	cursor: pointer;
 	margin-left:1000px;
 	margin-top:300px;
+	width: 100px;
+	height: 100px;
 	background-color: red;
+	cursor: pointer;
 }
 
 .hide{
@@ -233,6 +239,7 @@ video{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0, 0.9);
+	color: white;
 	position: absolute;
 	z-index: 20;
 	cursor: url(../css/image/close.png), auto;
@@ -253,13 +260,11 @@ video{
 	bottom: 50px;
 	left: 150px;
 	text-align: left;
-	width: 540px;
+	width: 50%;
 }
 
 .titre{
 	font-size: 48px;
-	line-height: 48px;
-	margin-bottom: 25px;
 	font-family: 'Avenir-Heavy';
 	width: 120%;
 }
@@ -301,8 +306,30 @@ video{
 .inter4{right: 180px;top: 480px;-
 }
 
-/*INTERACTIF 2*/
+.fondinteractif2 .texte{
+	position: absolute;
+	margin-top: 11%;
+	margin-left: 130px;
+	text-align: left;
+	color: white;
+	width: 540px;
+}
 
+/*CHOOSE*/
+
+.back{
+	height: 100%;
+	background-color: red;
+}
+.back2{
+	height: 100%;
+	background-color: green;
+}
+
+.back3{
+	height: 100%;
+	background-color: blue;
+}
 
 /*MEDIA QUERIES*/
 
