@@ -104,7 +104,7 @@ li {
 	position: absolute;
 	z-index: 20;
 	bottom: 60px;
-	left: 75px;
+	left: 100px;
 	color: #fff;
 	width: 100%;
 }
@@ -290,7 +290,7 @@ video{
 	position: absolute;
 	transform-origin: bottom left;
 	bottom: 40px;
-	left: 75px;
+	left: 100px;
 	text-align: left;
 	width: 39%;
 }
@@ -317,7 +317,7 @@ video{
 .interaction4{left: 63%;bottom:37%;}
 .interaction5{left: 65%;bottom:10%;}
 
-[class^=interaction]:hover, [class^=inter]:hover{
+[class^=inter]:hover{
 	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, transform .2s ease;
 	-webkit-transform:scale(1.5);
 	-moz-transform:scale(1.5);
@@ -341,7 +341,7 @@ video{
 .fondinteractif2 .texte{
 	position: absolute;
 	bottom: 40px;
-	left: 75px;
+	left: 100px;
 	text-align: left;
 	color: white;
 	width: 540px;
@@ -350,17 +350,23 @@ video{
 /*CHOOSE*/
 
 .back{
-	height: 100%;
-	background-color: red;
+	background: url('image/retine.jpg') no-repeat center;
 }
 .back2{
-	height: 100%;
-	background-color: green;
+	background: url('image/coeur.jpg') no-repeat center;
+}
+.back3{
+	background: url('image/prothese.jpg') no-repeat center;
 }
 
-.back3{
+[class^=back] {
 	height: 100%;
-	background-color: blue;
+	background-size: cover;
+	cursor: pointer;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-ms-transition: 0.2s all;
+	transition: 0.2s all;
 }
 
 /*MEDIATHEQUE*/
@@ -394,7 +400,7 @@ video{
 	position: absolute;
 	z-index: 1;
 	bottom: 40px;
-	left: 75px;
+	left: 100px;
 	width: 900px;
 }
 
