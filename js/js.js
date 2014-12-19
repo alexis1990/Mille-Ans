@@ -11,7 +11,7 @@ $(document).ready(function() {
         'sectionsColor': ['#F0F2F4', '#eee', '#aaa', '#000', '#aaa', '#aaa', '#111', '#aaa', '#111', '#000', '#000', '#111', '#000'],
         'navigation': true,
         'navigationPosition': 'left',
-        'navigationTooltips': ['Chapitre 1 : Découverte', 'secondSlide', 'Chapitre 2 : Reflexion', 'fourthSlide', 'Chapitre 3 : Recherche', 'Chapitre 4-1 : Découverte', 'Chapitre 4-2 : Rencontres', 'Interviews', 'Chapitre 5 : Conclusion', 'tenSlide', 'Médiathèque', 'Crédits'],
+        'navigationTooltips': ['Chapitre 1 : Découverte', 'secondSlide', 'Chapitre 2 : Réflexion', 'fourthSlide', 'Chapitre 3 : Recherche', 'Chapitre 4-1 : Découverte', 'Chapitre 4-2 : Rencontres', 'Interviews', 'Chapitre 5 : Conclusion', 'tenSlide', 'Médiathèque', 'Crédits'],
 
         onLeave: function(index, nextIndex, direction) {
             if (index == 1 && direction == 'down') {
