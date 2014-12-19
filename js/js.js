@@ -19,34 +19,48 @@ $(document).ready(function() {
                     video3.video.pause();
                 }
             } else if (index == 3 && direction == 'down') {
-                $('.section').eq(index - 1).removeClass('moveDown').addClass('moveUp');
                 if (video4.video.paused == false) {
                     video4.video.pause();
                 }
             } else if (index == 3 && direction == 'up') {
-                $('.section').eq(index - 1).removeClass('moveUp').addClass('moveDown');
                 if (video4.video.paused == false) {
                     video4.video.pause();
+                }
+            } else if (index == 5 && direction == 'up') {
+                if (video5.video.paused == false) {
+                    video5.video.pause();
                 }
             } else if (index == 5 && direction == 'down') {
                 if (video5.video.paused == false) {
                     video5.video.pause();
                 }
+            } else if (index == 6 && direction == 'up') {
+                if (video6.paused == false) {
+                    video6.pause();
+                }
             } else if (index == 6 && direction == 'down') {
+                if (video6.paused == false) {
+                    video6.pause();
+                }
+            } else if (index == 7 && direction == 'down') {
                 if (video.paused == false) {
                     video.pause();
                 }
-            } else if (index == 7 && direction == 'down') {
-                if (video2.video.paused == false) {
-                    video2.video.pause();
-                }
             } else if (index == 7 && direction == 'up') {
-                if (video2.video.paused == false) {
-                    video2.video.pause();
+                if (video.paused == false) {
+                    video.pause();
                 }
             } else if (index == 8 && direction == 'down') {
-                if (video6.video.paused == false) {
-                    video6.video.pause();
+                if (video2.video.paused == false) {
+                    video2.video.pause();
+                }
+            } else if (index == 8 && direction == 'up') {
+                if (video2.video.paused == false) {
+                    video2.video.pause();
+                }
+            } else if (index == 9 && direction == 'up') {
+                if (video7.video.paused == false) {
+                    video7.video.pause();
                 }
             } else if (index == 9 && direction == 'down') {
                 if (video7.video.paused == false) {
@@ -62,7 +76,7 @@ $(document).ready(function() {
             // }
 
             if (index == 3) {
-                video4.video.src = "videos/rush.mp4";
+                video4.video.src = "videos/chapitre2.mp4";
                 video4.video.load();
                 video4.listenToEvent();
                 video4.video.onended = function() {
@@ -70,27 +84,27 @@ $(document).ready(function() {
                 };
             }
             if (index == 5) {
-                video5.video.src = "videos/rush.mp4";
+                video5.video.src = "videos/chapitre3.mp4";
                 video5.video.load();
                 video5.listenToEvent();
                 video5.video.onended = function() {
                     $.fn.fullpage.moveTo(6);
                 };
             }
-            if (index == 8) {
-                video6.video.src = "videos/rush.mp4";
+            if (index == 6) {
+                video6.video.src = "videos/chapitre-4.1.mp4";
                 video6.video.load();
                 video6.listenToEvent();
                 video6.video.onended = function() {
-                    $.fn.fullpage.moveTo(9);
+                    $.fn.fullpage.moveTo(7);
                 };
             }
             if (index == 9) {
-                video7.video.src = "videos/rush.mp4";
+                video7.video.src = "videos/chapitre5.mp4";
                 video7.video.load();
                 video7.listenToEvent();
                 video7.video.onended = function() {
-                    $.fn.fullpage.moveTo(9);
+                    $.fn.fullpage.moveTo(10);
                 };
             }
         }
@@ -128,14 +142,17 @@ $(document).ready(function() {
                 }
                 var time = self.currentTime;
                 if (video.id == 'video') {
-                    if (time > 2.00 && time < 2.30) {
+                    console.log(time);
+                    if (time > 50.00 && time < 50.30) {
                         video.pause();
                         button.classList.remove('pause');
                         $('.element1').removeClass('hide');
                         $('.element2').removeClass('hide');
+                        $('.element3').removeClass('hide');
                     } else {
                         $('.element1').addClass('hide');
                         $('.element2').addClass('hide');
+                        $('.element3').addClass('hide');
                     }
                 }
             },
@@ -212,22 +229,33 @@ $(document).ready(function() {
     //ONCLICK LAUNCH OTHER VIDEO
     $('.element1').on('click', function(e) {
         e.stopPropagation();
-        $.fn.fullpage.moveTo(7);
+        $.fn.fullpage.moveTo(8);
         video2.video.src = "videos/interview1.mp4";
         video2.video.play();
         video2.video.onended = function() {
-            $.fn.fullpage.moveTo(6);
+            $.fn.fullpage.moveTo(7);
         };
 
     })
 
     $('.element2').on('click', function(e) {
         e.stopPropagation();
-        $.fn.fullpage.moveTo(7);
+        $.fn.fullpage.moveTo(8);
         video2.video.src = "videos/interview2.mp4";
         video2.video.play();
         video2.video.onended = function() {
-            $.fn.fullpage.moveTo(6);
+            $.fn.fullpage.moveTo(7);
+        };
+
+    })
+
+    $('.element3').on('click', function(e) {
+        e.stopPropagation();
+        $.fn.fullpage.moveTo(8);
+        video2.video.src = "videos/interview3.mp4";
+        video2.video.play();
+        video2.video.onended = function() {
+            $.fn.fullpage.moveTo(7);
         };
 
     })

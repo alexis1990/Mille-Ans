@@ -19,7 +19,7 @@
 	<title>Mille ans</title>
 </head>
 <body>
-	
+	<div class="error"><p>Résolution trop petite pour ce site</p></div>
 	<div id="bar-top"></div>
 	<div id="bar-right"></div>
 	<div id="bar-bottom"></div>
@@ -121,11 +121,11 @@
 		</div>
 
 		<div class="section">
-			<div class="back col-lg-4">
+			<div class="back col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			</div>
-			<div class="back2 col-lg-4">
+			<div class="back2 col-xs-4  col-sm-4 col-md-4 col-lg-4">
 			</div>
-			<div class="back3 col-lg-4">
+			<div class="back3 col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			</div>
 			<div class="lightbox lightbox3">
 				<div class="texte1 texte hide">
@@ -171,16 +171,33 @@
 			</div>
 		</div>
 
+		<!-- VIDEO 6 - CHAPITRE 4 - SLIDE 6 -->
+
+		<div class="section">
+			<div id="sixbutton" class="button"></div>
+			<video id="sixVideo" class="video" autoplay="false">
+			    <source src="" type='video/mp4'>
+			    <p>Your user agent does not support the HTML5 Video element.</p>
+			</video>
+			<div id="sixprogressBar" class="progressBar">
+			    <span class="sixprogress"></span>
+			    <span class="sixbuffer"></span>
+			</div>
+		</div>
+		
+		<!-- VIDEO - SLIDE 7 -->
+
 		<div class="section">
 			<div id="button" class="button"></div>
 			<video id="video"  class="video" autoplay="false">
-			    <source src="videos/interview2.mp4" type='video/mp4' >
+			    <source src="videos/chapitre-4.2.mp4" type='video/mp4' >
 			    <p>
 			    	Your user agent does not support the HTML5 Video element.
 			    </p>
 			</video>
 			<div class="hide element1"></div>
 			<div class="hide element2"></div>
+			<div class="hide element3"></div>
 			<div id="progressBar" class="progressBar">
 			    <span class="progress"></span>
 			    <span class="buffer"></span>
@@ -199,18 +216,6 @@
 			<div id="secondprogressBar" class="progressBar">
 			    <span class="secondprogress"></span>
 			    <span class="secondbuffer"></span>
-			</div>
-		</div>
-
-		<div class="section">
-			<div id="sixbutton" class="button"></div>
-			<video id="sixVideo" class="video" autoplay="false">
-			    <source src="" type='video/mp4'>
-			    <p>Your user agent does not support the HTML5 Video element.</p>
-			</video>
-			<div id="sixprogressBar" class="progressBar">
-			    <span class="sixprogress"></span>
-			    <span class="sixbuffer"></span>
 			</div>
 		</div>
 
@@ -369,8 +374,8 @@
 
 				<div id="sociaux">
 					<p>Faites vivre l'expérience sur les réseaux sociaux</p>
-					<p><a href="#">— Facebook</a></p>
-					<p><a href="#">— Twitter</a></p>
+					<div class="fb-share-button" data-href="http://68e573c9fb.url-de-test.ws/" data-layout="button_count"></div>
+					<div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://68e573c9fb.url-de-test.ws/" data-via="AZ_FirstOne">Tweet</a></div>
 				</div>
 			</div>
 
@@ -382,5 +387,26 @@
 	<script type="text/javascript" src="js/fullscreen.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/js.js"></script>
+	<!-- FACEBOOK -->
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1542577652625752',
+	      xfbml      : true,
+	      version    : 'v2.2'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- TWEETER -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	</script>
 </body>
 </html>

@@ -1,5 +1,9 @@
 /*GLOBAL*/
 
+.error{
+	display: none;
+}
+
 html, body {
 	font-family: 'Avenir-Book', serif;
 	font-size: 18px;
@@ -53,7 +57,7 @@ li {
 
 .progressBar {
 	width:80%;
-	height:4px;
+	height:8px;
 	border:1px solid #fff;
 	position:absolute;
 	bottom: 45px;
@@ -71,7 +75,7 @@ li {
 }
 
 .progressBar span{
-	height:2px;
+	height:7px;
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
@@ -153,7 +157,6 @@ video{
 	height:15px;
 	width:15px;
 	border:2px solid #fff;
-	background: url();
 	opacity:.6;
 	text-align:center;
 	background:transparent;transition:opacity .2s ease, -webkit-transform .2s ease;
@@ -204,16 +207,41 @@ video{
 }
 
 .element1{
-	margin-left:500px;
-	margin-top:300px;
-	background-color: black;
+	right:420px;
+	top:0px;
+	background-color: rgba(255,255,255,0.5);
+	width: 150px;
+	height: 180px;
+}
+
+.element1:hover{
+	background-color: rgba(255,255,255,0.2);
 }
 
 .element2{
-	margin-left:1000px;
-	margin-top:300px;
-	background-color: red;
+	right:420px;
+	top:200px;
+	background-color: rgba(255,255,255,0.5);
+	width: 150px;
+	height: 200px;
 }
+
+.element2:hover{
+	background-color: rgba(255,255,255,0.2);
+}
+
+.element3{
+	right:420px;
+	top:420px;
+	background-color: rgba(255,255,255,0.5);
+	width: 150px;
+	height: 200px;
+}
+
+.element3:hover{
+	background-color: rgba(255,255,255,0.2);
+}
+
 
 .hide{
 	display: none;
@@ -293,11 +321,11 @@ video{
 	cursor: pointer;
 }
 
-.interaction1{left: 30%;top: 30%;}
-.interaction2{left: 10%;bottom: 8%;}
-.interaction3{left: 30%;bottom:9%;}
-.interaction4{left: 46%;bottom:17%;}
-.interaction5{left: 63%;bottom:20%;}
+.interaction1{left: 45%;top: 20%;}
+.interaction2{left: 35%;bottom: 35%;}
+.interaction3{left: 50%;bottom:30%;}
+.interaction4{left: 63%;bottom:37%;}
+.interaction5{left: 65%;bottom:10%;}
 
 [class^=interaction]:hover, [class^=inter]:hover{
 	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, transform .2s ease;
@@ -418,29 +446,32 @@ video{
 	margin-top: 75px;
 }
 
-#sociaux p:first-child{
-	color: #ccc;
-	font-size: 12px!important;
-	text-transform: uppercase;
-	font-family: 'Avenir-Heavy';
-	margin-bottom: 10px;
+#sociaux div {
+	margin-top: 20px;
 }
-
-#sociaux a {
-	font-family: 'Avenir-Black';
-}
-
-#sociaux p:last-child {
-	margin-top: -10px;
-}
-
-
 
 /*MEDIA QUERIES*/
 
-@media(max-width:767px){
-
+@media(max-width:650px){
+	.error{
+		display: inline-block;
+		width: 100%;
+		height: 600px;
+		position: absolute;
+		z-index: 10;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 600px;
+	}
+	.error p {
+		color: black;
+	}
+	#fullpage{
+		display: none;
+	}
 }
+
+@media(max-width:767px){}
 @media(min-width:768px){}
 @media(min-width:992px){}
 @media(min-width:1200px){}
