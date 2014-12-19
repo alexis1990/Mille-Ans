@@ -1,8 +1,23 @@
 /*GLOBAL*/
 
+.error{
+	display: none;
+}
+
 html, body {
 	font-family: 'Avenir-Book', serif;
-	font-size: 18px;
+	font-size: 12px;
+}
+
+#logo {
+	width: 48px;
+	height: 48px;
+	display: block;
+	background: url('image/logo-white.svg') no-repeat center;
+	position: fixed;
+	top: 20px; 
+	left: 20px;
+	z-index: 9999;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 24px;
 	color: #fff;
 	font-family: 'Avenir-Heavy';
 	margin-bottom: 15px;
@@ -52,12 +67,12 @@ li {
 }
 
 .progressBar {
-	width:80%;
+	width:40%;
 	height:4px;
-	border:1px solid #fff;
+	background: #666;
 	position:absolute;
-	bottom: 45px;
-	left:10%;
+	bottom: 36px;
+	left:30%;
 	opacity:1;
 	z-index:6;
 }
@@ -71,7 +86,7 @@ li {
 }
 
 .progressBar span{
-	height:2px;
+	height:4px;
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
@@ -88,14 +103,14 @@ li {
 #poll {
 	position: absolute;
 	z-index: 20;
-	bottom: 10%;
+	bottom: 60px;
 	left: 75px;
 	color: #fff;
 	width: 100%;
 }
 
 #poll h3 {
-	font-size: 36px;
+	font-size: 24px;
 	font-family: 'Avenir-Heavy';
 }
 
@@ -103,9 +118,9 @@ label {
 	cursor: pointer;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 24px;
+	font-size: 14px;
 	font-family: 'Avenir-Medium';
-	margin: 15px 50px 0 35px;
+	margin: 15px 50px 0 25px;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
 	-ms-transition: 0.2s all;
@@ -115,11 +130,11 @@ label {
 label:before {
 	content: '';
 	display: block;
-	width: 24px;
+	width: 14px;
 	height: 2px;
 	background: #fff;
-	margin-left: -35px;
-	transform: translateY(30px);
+	margin-left: -25px;
+	transform: translateY(15px);
 	transform-origin: left;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
@@ -128,12 +143,12 @@ label:before {
 }
 
 label:hover:before {
-	width: 24px!important;
+	width: 14px!important;
 }
 
 .question:before {
 	width: 0px!important;
-	transform: translateY(20px)!important;
+	transform: translateY(10px)!important;
 }
 
 /*VIDEO*/
@@ -147,16 +162,15 @@ video{
 
 .button{
 	position:absolute;
-	bottom:40px;
-	left:7%;
+	bottom:30px;
+	left:27.5%;
 	z-index:2;
 	height:15px;
 	width:15px;
-	border:2px solid #fff;
-	background: url();
-	opacity:.6;
+	background: url('image/play.png') no-repeat center;
+	background-size: contain;
 	text-align:center;
-	background:transparent;transition:opacity .2s ease, -webkit-transform .2s ease;
+	cursor: pointer;
 }
 
 .play{
@@ -215,6 +229,12 @@ video{
 	background-color: red;
 }
 
+.element3{
+	margin-left:700px;
+	margin-top:320px;
+	background-color: blue;
+}
+
 .hide{
 	display: none;
 }
@@ -223,12 +243,12 @@ video{
 
 .fullscreen{
 	background: url(../css/image/fullscreen.svg) no-repeat;
-	width: 50px;
-	height: 50px;
+	width: 48px;
+	height: 24px;
 	opacity:1;
 	position: absolute;
-	bottom: 1%;
-	right: 2%;
+	bottom: 20px;
+	right: 20px;
 	z-index: 20;
 	cursor: pointer;
 	background-color: transparent;
@@ -241,10 +261,8 @@ video{
 }
 
 .fondinteractif{
-	background: url(../css/image/bureau.jpg) no-repeat center center;   
-	-webkit-background-size: cover;   
-	-moz-background-size: cover;   
-	-o-background-size: cover;   
+	background: url(../css/image/bureau.jpg) no-repeat center center;  
+	background-size: cover;   
 }
 
 /*INTERACTION*/
@@ -262,7 +280,7 @@ video{
 .lightbox2{
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0, 0.7);
+	background-color: rgba(0,0,0, 0.9);
 	color: white;
 	position: absolute;
 	z-index: 20;
@@ -271,14 +289,14 @@ video{
 .texte{
 	position: absolute;
 	transform-origin: bottom left;
-	bottom: 50px;
-	left: 150px;
+	bottom: 40px;
+	left: 75px;
 	text-align: left;
-	width: 50%;
+	width: 39%;
 }
 
 .titre{
-	font-size: 48px;
+	font-size: 24px;
 	font-family: 'Avenir-Heavy';
 	width: 120%;
 }
@@ -293,11 +311,11 @@ video{
 	cursor: pointer;
 }
 
-.interaction1{left: 30%;top: 30%;}
-.interaction2{left: 10%;bottom: 8%;}
-.interaction3{left: 30%;bottom:9%;}
-.interaction4{left: 46%;bottom:17%;}
-.interaction5{left: 63%;bottom:20%;}
+.interaction1{left: 45%;top: 20%;}
+.interaction2{left: 35%;bottom: 35%;}
+.interaction3{left: 50%;bottom:30%;}
+.interaction4{left: 63%;bottom:37%;}
+.interaction5{left: 65%;bottom:10%;}
 
 [class^=interaction]:hover, [class^=inter]:hover{
 	transition:opacity .2s ease, -webkit-transform, -moz-transform, -ms-transform, transform .2s ease;
@@ -322,8 +340,8 @@ video{
 
 .fondinteractif2 .texte{
 	position: absolute;
-	margin-top: 11%;
-	margin-left: 130px;
+	bottom: 40px;
+	left: 75px;
 	text-align: left;
 	color: white;
 	width: 540px;
@@ -354,19 +372,21 @@ video{
 #source h4 {
 	text-transform: uppercase;
 	font-family: 'Avenir-Black';
-	font-size: 14px;
-	margin-top: 50px;
+	font-size: 10px;
+	margin-top: 40px;
 	margin-bottom: 5px;
+	color: #ccc;
 }
 
 #source li a {
-	font-size: 24px!important;
+	font-size: 14px!important;
 }
 
-#source ul {
-	-webkit-columns: 3 500px;
-	-moz-columns: 3 500px;
-}
+/*#source ul {
+	-webkit-columns: 2 400px;
+	-webkit-column-gap: 20px;
+	-moz-columns: 2 400px;
+}*/
 
 /*ABOUT*/
 
@@ -374,21 +394,22 @@ video{
 	position: absolute;
 	z-index: 1;
 	bottom: 40px;
+	left: 75px;
+	width: 900px;
 }
 
 #about p {
-	font-size: 18px;
+	font-size: 12px;
 	color: #fff;
 	line-height: 1.5em;
 }
 
 .content {
-	width: 1100px;
-	margin-left: 150px;
+	width: 900px;
 }
 
 #thanks {
-	margin-top: 75px;
+	margin-top: 40px;
 }
 
 .thanks-id {
@@ -404,13 +425,13 @@ video{
 	color: #ccc!important;
 	font-family: 'Avenir-Heavy';
 	text-transform: uppercase;
-	font-size: 12px!important;
+	font-size: 10px!important;
 	margin: 0;
 }
 
 .thanks-id p:last-child{
 	font-family: 'Avenir-Black';
-	font-size: 24px!important;
+	font-size: 14px!important;
 	margin: 0;
 }
 
@@ -420,10 +441,10 @@ video{
 
 #sociaux p:first-child{
 	color: #ccc;
-	font-size: 12px!important;
+	font-size: 10px!important;
 	text-transform: uppercase;
 	font-family: 'Avenir-Heavy';
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 #sociaux a {
@@ -434,13 +455,28 @@ video{
 	margin-top: -10px;
 }
 
-
-
 /*MEDIA QUERIES*/
 
-@media(max-width:767px){
-
+@media(max-width:650px){
+	.error{
+		display: inline-block;
+		width: 100%;
+		height: 600px;
+		position: absolute;
+		z-index: 10;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 600px;
+	}
+	.error p {
+		color: black;
+	}
+	#fullpage{
+		display: none;
+	}
 }
+
+@media(max-width:767px){}
 @media(min-width:768px){}
 @media(min-width:992px){}
 @media(min-width:1200px){}

@@ -141,7 +141,7 @@ html, body {
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span {
     background: #fff;
-    opacity:.8;
+    opacity:1;
 }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -158,10 +158,10 @@ html, body {
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
+    top: -1px;
     color: #fff;
-    font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    font-size: 10px;
+    font-family: 'Avenir-Book', arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
