@@ -67,15 +67,9 @@ li {
 }
 
 .progressBar {
-<<<<<<< HEAD
-	width:80%;
-	height:8px;
-	border:1px solid #fff;
-=======
 	width:40%;
 	height:4px;
 	background: #666;
->>>>>>> FETCH_HEAD
 	position:absolute;
 	bottom: 36px;
 	left:30%;
@@ -92,11 +86,7 @@ li {
 }
 
 .progressBar span{
-<<<<<<< HEAD
-	height:7px;
-=======
 	height:4px;
->>>>>>> FETCH_HEAD
 	background-color:#fff;
 	display:inline-block;
 	position:absolute;
@@ -172,12 +162,11 @@ video{
 
 .button{
 	position:absolute;
-	bottom:30px;
+	bottom:32px;
 	left:27.5%;
 	z-index:2;
 	height:15px;
 	width:15px;
-	border:2px solid #fff;
 	opacity:.6;
 	background-size: contain;
 	text-align:center;
@@ -186,6 +175,7 @@ video{
 
 .button.play{
 	background: url('image/play.png') no-repeat center;
+	z-index: 4;
 }
 
 .button.pause{

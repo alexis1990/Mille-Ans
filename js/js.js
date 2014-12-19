@@ -35,12 +35,12 @@ $(document).ready(function() {
                     video5.video.pause();
                 }
             } else if (index == 6 && direction == 'up') {
-                if (video6.paused == false) {
-                    video6.pause();
+                if (video6.video.paused == false) {
+                    video6.video.pause();
                 }
             } else if (index == 6 && direction == 'down') {
-                if (video6.paused == false) {
-                    video6.pause();
+                if (video6.video.paused == false) {
+                    video6.video.pause();
                 }
             } else if (index == 7 && direction == 'down') {
                 if (video.paused == false) {
@@ -165,7 +165,6 @@ $(document).ready(function() {
                 //var self=this;
                 if (player.video.paused) {
                     player.video.play();
-                    player.button.classList.add('play');
                     player.button.classList.remove('pause');
                 } else {
                     player.video.pause();
@@ -190,7 +189,7 @@ $(document).ready(function() {
     var video4 = generatePlayer(document.getElementById('fourthVideo'), document.getElementById('fourthbutton'), document.getElementById('fourthprogressBar'), 'video4');
     var video5 = generatePlayer(document.getElementById('fifthVideo'), document.getElementById('fifthbutton'), document.getElementById('fifthprogressBar'), 'video5');
     var video6 = generatePlayer(document.getElementById('sixVideo'), document.getElementById('sixbutton'), document.getElementById('sixprogressBar'), 'video6');
-    var video7 = generatePlayer(document.getElementById('sevenVideo'), document.getElementById('sevenbutton'), document.getElementById('sevenprogressBar'), 'video6');
+    var video7 = generatePlayer(document.getElementById('sevenVideo'), document.getElementById('sevenbutton'), document.getElementById('sevenprogressBar'), 'video7');
 
     video1.listenToEvent();
     video2.listenToEvent();
